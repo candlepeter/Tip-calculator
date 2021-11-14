@@ -1,0 +1,243 @@
+:root {
+  --strongCyan: hsl(172, 67%, 45%);
+  --veryDarkCyan: hsl(183, 100%, 15%);
+  --darkGrayishCyan: hsl(186, 14%, 43%);
+  --darkGrayishCyan: hsl(184, 14%, 56%);
+  --lightGrayishCyan: hsl(185, 41%, 84%);
+  --lighterGrayishCyan: hsl(189, 41%, 97%);
+  --White: hsl(0, 0%, 100%);
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-size: 1.5em;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.grid {
+  display: grid;
+}
+
+.flex {
+  display: flex;
+}
+
+.none {
+  display: none;
+}
+
+.text-align {
+  text-align: left;
+}
+
+.container {
+  min-width: 100vw;
+  place-content: center;
+  background-color: var(--lightGrayishCyan);
+}
+
+.container > p {
+  padding: 1em;
+  text-transform: uppercase;
+  letter-spacing: 0.6em;
+  min-width: 4ch;
+  text-align: center;
+}
+
+.form-wrapper input {
+  min-width: 100%;
+  padding-inline: 1em;
+  border-radius: 5px;
+  outline: 0;
+  border: 0;
+  font-size: 0.8em;
+}
+
+.form-wrapper > * p,
+.people > span {
+  font-size: 0.7em;
+  margin: 1.5em 0 0.5em 0;
+  color: var(--veryDarkCyan);
+}
+
+input[type="text"] {
+  padding: 0.5em 1em;
+  background-color: var(--lighterGrayishCyan);
+  text-align: right;
+}
+
+input[type="text"]:hover {
+  cursor: pointer;
+  border: 2px solid var(--lightGrayishCyan);
+}
+
+.select-tip-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 0.5em;
+}
+
+.btn {
+  padding: 0.5em 0;
+  color: var(--lighterGrayishCyan);
+  background-color: var(--veryDarkCyan);
+}
+
+.btn:active,
+.btn:hover,
+.btn:focus-visible,
+.custom:focus-visible,
+input[type="text"].custom:hover,
+input[type="text"].custom:active {
+  background-color: var(--strongCyan);
+  color: var(--veryDarkCyan);
+}
+
+input[type="text"].custom {
+  padding: 0.5em;
+  background-color: var(--lighterGrayishCyan);
+  text-align: center;
+}
+
+.people > span {
+  margin-left: auto;
+  padding-right: 1em;
+  color: red;
+}
+
+input[type="text"].people-error {
+  border: 1px solid red;
+}
+
+.result-wrapper {
+  display: grid;
+  padding: 2em 1.5em;
+  border-radius: 5px;
+  color: var(--lightGrayishCyan);
+  background-color: var(--veryDarkCyan);
+}
+
+.result-wrapper > div {
+  display: flex;
+}
+
+.result-wrapper p {
+  font-size: 0.8em;
+}
+
+.result-wrapper span {
+  font-size: 1.3em;
+  margin-left: auto;
+  color: var(--strongCyan);
+}
+
+#reset {
+  min-width: 100%;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-color: var(--strongCyan);
+  color: var(--veryDarkCyan);
+  border: 0;
+  outline: 0;
+  border-radius: 5px;
+  align-self: end;
+  font-size: 0.8em;
+  padding-block: 0.4em;
+}
+
+@media screen and (min-width: 375px) {
+  .main-wrapper {
+    min-width: 80%;
+    padding-inline: 1em;
+    background-color: var(--White);
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 1em;
+    border-radius: 10px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .main-wrapper {
+    padding: 2em 2.5em;
+    background-color: var(--White);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    column-gap: 2em;
+  }
+}

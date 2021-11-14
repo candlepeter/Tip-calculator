@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Tip calculator</title>
+  </head>
+  <body>
+    <!-- main container -->
+    <main class="container grid">
+      <p>splitter</p>
+      <!-- main wrapper -->
+      <div class="main-wrapper text-align grid">
+        <div class="form-wrapper">
+          <form action="#" method="get">
+            <p>Bill</p>
+            <input type="text" name="text" id="bill" placeholder="0" />
+            <p>Select tip %</p>
+            <div class="select-tip-wrapper">
+              <input class="btn" type="button" value="5%" />
+              <input class="btn" type="button" value="10%" />
+              <input class="btn" type="button" value="15%" />
+              <input class="btn" type="button" value="25%" />
+              <input class="btn" type="button" value="50%" />
+              <input class="custom" type="text" placeholder="Custom" />
+            </div>
+            <div class="people flex">
+              <p>Number of People</p>
+              <span class="error-message none">error-message</span>
+            </div>
+            <input type="text" name="text" id="people" placeholder="0" />
+          </form>
+        </div>
+        <div class="result-wrapper">
+          <div>
+            <p>Tip Amount</p>
+            <span class="tip-amount-display">$0.00</span>
+          </div>
+          <div>
+            <p>Total</p>
+            <span class="total-display">$0.00</span>
+          </div>
+          <input id="reset" type="button" value="reset" />
+        </div>
+      </div>
+    </main>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
