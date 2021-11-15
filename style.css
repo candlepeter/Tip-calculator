@@ -108,14 +108,26 @@ select {
   min-width: 100vw;
   place-content: center;
   background-color: var(--lightGrayishCyan);
+  font-family: "Space Mono", monospace;
 }
 
-.container > p {
+.header-text {
   padding: 1em;
   text-transform: uppercase;
   letter-spacing: 0.6em;
   min-width: 4ch;
   text-align: center;
+  font-weight: 700;
+}
+
+.container > span {
+  text-align: center;
+  font-size: 0.5em;
+}
+
+.main-wrapper {
+  min-width: 80%;
+  padding-inline: 1em;
 }
 
 .form-wrapper input {
@@ -222,8 +234,6 @@ input[type="text"].people-error {
 
 @media screen and (min-width: 375px) {
   .main-wrapper {
-    min-width: 80%;
-    padding-inline: 1em;
     background-color: var(--White);
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, 1fr);
